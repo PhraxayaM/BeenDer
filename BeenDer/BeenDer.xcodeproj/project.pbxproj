@@ -14,6 +14,8 @@
 		CD479AAF246B89BF007F91A0 /* NMProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AAE246B89BF007F91A0 /* NMProperties.swift */; };
 		CD479AB3246B8BC8007F91A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB2246B8BC8007F91A0 /* MainViewController.swift */; };
 		CD479AB6246B8CAD007F91A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB5246B8CAD007F91A0 /* MainView.swift */; };
+		CD479ABA246BD295007F91A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB9246BD295007F91A0 /* LoginViewController.swift */; };
+		CD479ABC246BD2FC007F91A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479ABB246BD2FC007F91A0 /* LoginView.swift */; };
 		CD4934632459EFB800E42E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934622459EFB800E42E36 /* AppDelegate.swift */; };
 		CD4934652459EFB800E42E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934642459EFB800E42E36 /* SceneDelegate.swift */; };
 		CD4934672459EFB800E42E36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934662459EFB800E42E36 /* ContentView.swift */; };
@@ -30,6 +32,8 @@
 		CD479AAE246B89BF007F91A0 /* NMProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMProperties.swift; sourceTree = "<group>"; };
 		CD479AB2246B8BC8007F91A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD479AB5246B8CAD007F91A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CD479AB9246BD295007F91A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CD479ABB246BD2FC007F91A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD49345F2459EFB800E42E36 /* BeenDer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeenDer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4934622459EFB800E42E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4934642459EFB800E42E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				CD479AB2246B8BC8007F91A0 /* MainViewController.swift */,
+				CD479AB9246BD295007F91A0 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CD479AB5246B8CAD007F91A0 /* MainView.swift */,
+				CD479ABB246BD2FC007F91A0 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,10 +219,12 @@
 				CD479AB6246B8CAD007F91A0 /* MainView.swift in Sources */,
 				CD4934652459EFB800E42E36 /* SceneDelegate.swift in Sources */,
 				CD4934672459EFB800E42E36 /* ContentView.swift in Sources */,
+				CD479ABC246BD2FC007F91A0 /* LoginView.swift in Sources */,
 				CD479AAF246B89BF007F91A0 /* NMProperties.swift in Sources */,
 				CD479AB3246B8BC8007F91A0 /* MainViewController.swift in Sources */,
 				CD479A60246A4A42007F91A0 /* Author.swift in Sources */,
 				CD479AAB246B88A3007F91A0 /* BookNetworkManager.swift in Sources */,
+				CD479ABA246BD295007F91A0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

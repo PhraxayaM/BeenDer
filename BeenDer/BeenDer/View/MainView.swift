@@ -42,8 +42,9 @@ class MainView: UIView {
         let label = UILabel()
         label.textColor = UIColor(named: "TextColor")
         label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.text =  "Welcome User"
+        label.text =  "What would you read, Matthew?"
         label.textAlignment = .center
+        label.numberOfLines = 2
         
         
         return label
@@ -79,6 +80,8 @@ extension MainView {
         welcomeLabel.translatesAutoresizingMaskIntoConstraints  = false
         welcomeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
         welcomeLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+        welcomeLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        welcomeLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         createSessionButton.translatesAutoresizingMaskIntoConstraints =  false
         createSessionButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 100).isActive = true
@@ -93,9 +96,6 @@ extension MainView {
         previousSessionButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
         previousSessionButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
         previousSessionButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.075).isActive = true
-        
-        
-        
     }
     
     
