@@ -72,7 +72,9 @@ class MainMenuViewController: UIViewController {
     }
     
     @objc func resultsTapped() {
-        getBook.getBook(title: "enders") { data in
+        guard let input = menuView.searchTextfield.text else { return print("input not working")
+        }
+        getBook.getBook(title: input) { data in
             self.resultViewModel.decodeXML(data)
             DispatchQueue.main.async {
                 let resultVC = ResultsViewController()
@@ -82,7 +84,4 @@ class MainMenuViewController: UIViewController {
         }
     }
     
-    
-    
 }
-

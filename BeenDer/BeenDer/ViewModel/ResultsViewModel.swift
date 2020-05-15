@@ -14,12 +14,11 @@ class ResultsViewModel: UIViewController, XMLParserDelegate {
     
     
     let network = BookNetworkManager()
-    
-    //    var results =  books()
+    var input: String = ""
     var books: [Book] = []
     
     func resultsArray(completion: @escaping ()->()) {
-        network.getBook(title: "enders") { Data in
+        network.getBook(title: input) { Data in
             self.decodeXML(Data)
             //            print("get books: \(self.books)")
             //            print("resultsviewmodeL")

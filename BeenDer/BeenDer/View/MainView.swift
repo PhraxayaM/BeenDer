@@ -82,11 +82,10 @@ extension MainView {
         ResultsButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         searchTextfield.translatesAutoresizingMaskIntoConstraints =  false
-        searchTextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150).isActive = true
+        searchTextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
         searchTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        //        ResultsButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
-        //        ResultsButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
-        searchTextfield.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        searchTextfield.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        searchTextfield.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         previousSessionButton.translatesAutoresizingMaskIntoConstraints = false
         previousSessionButton.topAnchor.constraint(equalTo: ResultsButton.bottomAnchor, constant: 100).isActive = true
