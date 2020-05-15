@@ -31,12 +31,9 @@ class ResultsTableViewCell: UITableViewCell {
         return label
         
     }()
-
     
     let containerView: UIView = {
         let view = UIView()
-            
-        
         return view
     }()
     

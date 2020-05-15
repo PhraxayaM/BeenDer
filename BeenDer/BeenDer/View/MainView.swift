@@ -27,9 +27,10 @@ class MainView: UIView {
     
     func setupSubViews() {
         addSubview(welcomeLabel)
-        addSubview(ResultsButton)
+        addSubview(resultsButton)
         addSubview(previousSessionButton)
         addSubview(searchTextfield)
+        addSubview(logoImage)
     }
     
     let welcomeLabel: UILabel = {
@@ -42,11 +43,17 @@ class MainView: UIView {
         return label
     }()
     
-    let ResultsButton: UIButton = {
+    let resultsButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(named: "ButtonColor")
-        let buttonText = NSMutableAttributedString(attributedString: NSAttributedString(string: "See results", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor(named: "Color")!]))
-        button.setAttributedTitle(buttonText, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.3276904225, blue: 0.5544323921, alpha: 1)
+//        let buttonText = NSMutableAttributedString(attributedString: NSAttributedString(string: "See results", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor(named: "Color")!]))
+//        button.setAttributedTitle(buttonText, for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Search", for: .normal)
         return button
     }()
     
@@ -58,47 +65,45 @@ class MainView: UIView {
         return button
     }()
     
-    let searchTextfield: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .blue
+    let searchTextfield: TextField = {
+        let textField = TextField()
+        textField.backgroundColor = #colorLiteral(red: 0.8055436015, green: 0.8288783431, blue: 0.8136507273, alpha: 1)
+        textField.placeholder = "Search"
+        textField.textAlignment = .center
+        textField.layer.cornerRadius = 10
+        textField.layer.borderWidth = 2
+        textField.layer.masksToBounds = true
+        textField.layer.shadowColor = UIColor.black.cgColor
+        textField.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        textField.layer.shadowRadius = 2.0
+        textField.layer.shadowOpacity = 0.5
+        textField.layer.masksToBounds = false
+        textField.layer.shadowPath = UIBezierPath(roundedRect: textField.bounds, cornerRadius: 15).cgPath
         return textField
+    }()
+    
+    let logoImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "Bender")
+        return image
     }()
 }
 
-extension MainView {
-    
-    func setViewContraints() {
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints  = false
-        welcomeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
-        welcomeLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        welcomeLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        welcomeLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        ResultsButton.translatesAutoresizingMaskIntoConstraints =  false
-        ResultsButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
-        ResultsButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        //        ResultsButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
-        //        ResultsButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
-        ResultsButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        searchTextfield.translatesAutoresizingMaskIntoConstraints =  false
-        searchTextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
-        searchTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        searchTextfield.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        searchTextfield.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
-        previousSessionButton.translatesAutoresizingMaskIntoConstraints = false
-        previousSessionButton.topAnchor.constraint(equalTo: ResultsButton.bottomAnchor, constant: 100).isActive = true
-        previousSessionButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        previousSessionButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
-        previousSessionButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
-        previousSessionButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.075).isActive = true
-        
-        
+
+class TextField: UITextField {
+    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
     }
-    
-    
-    
-    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
 }
+
+
+
+
 

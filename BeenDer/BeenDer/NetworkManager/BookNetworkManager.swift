@@ -9,23 +9,18 @@
 import Foundation
 
 class BookNetworkManager: NMProtocol {
-    var books: [Book] = []
-    var elementName: String = String()
-    var bookTitle = String()
-    var bookAuthor = String()
+    
     func getBook(title: String, completion: @escaping (Data) -> ()) {
         //        uisearchbar.text pass in for title
-        let API_URL =        "https://www.goodreads.com/search.xml?key=\(NetworkProperties.API_KEY)&q=\(title)"
         
-        guard let url = URL(string: API_URL) else {
+        let API_URL =        "https://www.goodreads.com/search.xml?key=\(NetworkProperties.API_KEY)&q=\(title)"
+        var urlString = API_URL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        guard let url = URL(string: urlString!) else {
             fatalError()
         }
         let urlRequest = URLRequest(url: url)
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard let data = data else { return }
-            //            print("data is: \(data)")
-            //            print(response)
-            //            print(error)
             
             completion(data)
         }.resume()

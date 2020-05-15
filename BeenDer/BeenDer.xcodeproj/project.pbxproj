@@ -30,6 +30,7 @@
 		CD49346F2459EFBC00E42E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD49346D2459EFBC00E42E36 /* LaunchScreen.storyboard */; };
 		CDB3DBAA246BFEBB00D2D21C /* ResultsViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */; };
 		CDB3DBAF246E4DE500D2D21C /* ResultsDataSource2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3DBAE246E4DE500D2D21C /* ResultsDataSource2.swift */; };
+		CDB3DBB1246F415900D2D21C /* MainViewContraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3DBB0246F415900D2D21C /* MainViewContraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewConstraints.swift; sourceTree = "<group>"; };
 		CDB3DBAD246C683700D2D21C /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		CDB3DBAE246E4DE500D2D21C /* ResultsDataSource2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataSource2.swift; sourceTree = "<group>"; };
+		CDB3DBB0246F415900D2D21C /* MainViewContraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				CD479AC6246BFA80007F91A0 /* ResultsViewTableViewCell.swift */,
 				CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */,
+				CDB3DBB0246F415900D2D21C /* MainViewContraints.swift */,
 			);
 			path = ViewConstraints;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				CDB3DBAF246E4DE500D2D21C /* ResultsDataSource2.swift in Sources */,
 				CD479AAF246B89BF007F91A0 /* NMProperties.swift in Sources */,
 				CD479AC7246BFA80007F91A0 /* ResultsViewTableViewCell.swift in Sources */,
+				CDB3DBB1246F415900D2D21C /* MainViewContraints.swift in Sources */,
 				CD479ABE246BE52C007F91A0 /* ResultsDataSource.swift in Sources */,
 				CD479AB3246B8BC8007F91A0 /* MainMenuViewController.swift in Sources */,
 				CD479A60246A4A42007F91A0 /* Author.swift in Sources */,

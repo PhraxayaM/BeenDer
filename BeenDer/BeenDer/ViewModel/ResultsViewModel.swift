@@ -18,6 +18,7 @@ class ResultsViewModel: UIViewController, XMLParserDelegate {
     var books: [Book] = []
     
     func resultsArray(completion: @escaping ()->()) {
+//        books = []
         network.getBook(title: input) { Data in
             self.decodeXML(Data)
             //            print("get books: \(self.books)")

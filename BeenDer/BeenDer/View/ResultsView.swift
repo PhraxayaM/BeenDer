@@ -23,10 +23,6 @@ class ResultsView: UIView {
     override  init(frame: CGRect) {
         super .init(frame: frame)
             setupView()
-        backgroundColor = .red
-        viewModel?.resultsArray(completion: {
-            
-        })
     }
     
      
@@ -44,14 +40,11 @@ class ResultsView: UIView {
     
     func setupSubViews() {
         addSubview(tableView)
-//        tableView.delegate = self
-//        tableView.dataSource = self
     }
     
 
     let tableView: UITableView = {
         let tableview = UITableView()
-        tableview.backgroundColor = UIColor(named: "BackgroundColor")
         tableview.tableFooterView = UIView()
         tableview.register(ResultsTableViewCell.self, forCellReuseIdentifier: ResultsTableViewCell.identifier)
         return tableview

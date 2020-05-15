@@ -12,7 +12,7 @@ import UIKit
 class LoginViewController: UIViewController {
     var loginView: LoginView!
 //    let viewModel = LoginViewModel()
-    
+    var mainView: MainView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

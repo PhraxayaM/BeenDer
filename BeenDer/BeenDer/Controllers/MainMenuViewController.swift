@@ -10,28 +10,13 @@ import Foundation
 import UIKit
 
 class MainMenuViewController: UIViewController {
-    var menuView: MainView!
+    var mainView: MainView!
     let resultViewModel = ResultsViewModel()
     var getBook = BookNetworkManager()
-    
-    
-    var books: [Book] = [] {
-        didSet {
-            for i in 0...books.count - 1 {
-                print("book-\(i): \(books[i])")
-            }
-        }
-    }
-    
-    var elementName: String = String()
-    var bookTitle = String()
-    var bookAuthor = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -57,24 +42,22 @@ class MainMenuViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "AlternateGrey")
     }
     
-    
-    
-    
     func setupView() {
         let mainView = MainView(frame: self.view.frame)
-        self.menuView = mainView
-        self.view.addSubview(menuView)
+        self.mainView = mainView
+        self.view.addSubview(mainView)
     }
     
     func addButtonTarget() {
-        menuView.ResultsButton.addTarget(self, action: #selector(resultsTapped), for: .touchUpInside)
+        mainView.resultsButton.addTarget(self, action: #selector(resultsTapped), for: .touchUpInside)
 
     }
     
     @objc func resultsTapped() {
-        guard let input = menuView.searchTextfield.text else { return print("input not working")
+        guard let input = mainView.searchTextfield.text else { return print("input not working")
         }
         getBook.getBook(title: input) { data in
+            self.resultViewModel.books = []
             self.resultViewModel.decodeXML(data)
             DispatchQueue.main.async {
                 let resultVC = ResultsViewController()
