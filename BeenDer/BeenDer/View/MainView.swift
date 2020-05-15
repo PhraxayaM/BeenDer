@@ -27,16 +27,10 @@ class MainView: UIView {
     
     func setupSubViews() {
         addSubview(welcomeLabel)
-        addSubview(createSessionButton)
+        addSubview(ResultsButton)
         addSubview(previousSessionButton)
+        addSubview(searchTextfield)
     }
-    let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "100ReactLogo")
-        
-        return imageView
-        
-    }()
     
     let welcomeLabel: UILabel = {
         let label = UILabel()
@@ -45,18 +39,14 @@ class MainView: UIView {
         label.text =  "What would you read, Matthew?"
         label.textAlignment = .center
         label.numberOfLines = 2
-        
-        
         return label
-        
     }()
     
-    let createSessionButton: UIButton = {
+    let ResultsButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "ButtonColor")
-        let buttonText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Create a new session", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor(named: "BackgroundColor")!]))
+        let buttonText = NSMutableAttributedString(attributedString: NSAttributedString(string: "See results", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor(named: "Color")!]))
         button.setAttributedTitle(buttonText, for: .normal)
-        
         return button
     }()
     
@@ -65,37 +55,47 @@ class MainView: UIView {
         button.backgroundColor = UIColor(named: "ButtonColor")
         let buttonText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Previous Sessions", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), .foregroundColor: UIColor(named: "BackgroundColor")!]))
         button.setAttributedTitle(buttonText, for: .normal)
-        
         return button
     }()
     
-    
+    let searchTextfield: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .blue
+        return textField
+    }()
 }
 
 extension MainView {
     
     func setViewContraints() {
-        
-        
         welcomeLabel.translatesAutoresizingMaskIntoConstraints  = false
         welcomeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
         welcomeLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         welcomeLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         welcomeLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        createSessionButton.translatesAutoresizingMaskIntoConstraints =  false
-        createSessionButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 100).isActive = true
-        createSessionButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        createSessionButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
-        createSessionButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
-        createSessionButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.075).isActive = true
+        ResultsButton.translatesAutoresizingMaskIntoConstraints =  false
+        ResultsButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
+        ResultsButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+        //        ResultsButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
+        //        ResultsButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
+        ResultsButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        searchTextfield.translatesAutoresizingMaskIntoConstraints =  false
+        searchTextfield.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150).isActive = true
+        searchTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+        //        ResultsButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
+        //        ResultsButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
+        searchTextfield.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         previousSessionButton.translatesAutoresizingMaskIntoConstraints = false
-        previousSessionButton.topAnchor.constraint(equalTo: createSessionButton.bottomAnchor, constant: 100).isActive = true
+        previousSessionButton.topAnchor.constraint(equalTo: ResultsButton.bottomAnchor, constant: 100).isActive = true
         previousSessionButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         previousSessionButton.leftAnchor.constraint(equalTo: welcomeLabel.leftAnchor).isActive = true
         previousSessionButton.rightAnchor.constraint(equalTo: welcomeLabel.rightAnchor).isActive = true
         previousSessionButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.075).isActive = true
+        
+        
     }
     
     

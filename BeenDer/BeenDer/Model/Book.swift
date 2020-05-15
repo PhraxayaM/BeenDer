@@ -7,14 +7,9 @@
 //
 
 import Foundation
-//struct Book {
-//    var id: String
-//    var title: String
-//    var author: Author
-//    var imageUrl: String
-//
-//}
+
 struct Book {
     var bookTitle: String
     var bookAuthor: String
 }
+

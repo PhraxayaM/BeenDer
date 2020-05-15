@@ -12,16 +12,24 @@
 		CD479AAB246B88A3007F91A0 /* BookNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AAA246B88A3007F91A0 /* BookNetworkManager.swift */; };
 		CD479AAD246B88BB007F91A0 /* NMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AAC246B88BB007F91A0 /* NMProtocol.swift */; };
 		CD479AAF246B89BF007F91A0 /* NMProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AAE246B89BF007F91A0 /* NMProperties.swift */; };
-		CD479AB3246B8BC8007F91A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB2246B8BC8007F91A0 /* MainViewController.swift */; };
+		CD479AB3246B8BC8007F91A0 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB2246B8BC8007F91A0 /* MainMenuViewController.swift */; };
 		CD479AB6246B8CAD007F91A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB5246B8CAD007F91A0 /* MainView.swift */; };
 		CD479ABA246BD295007F91A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AB9246BD295007F91A0 /* LoginViewController.swift */; };
 		CD479ABC246BD2FC007F91A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479ABB246BD2FC007F91A0 /* LoginView.swift */; };
+		CD479ABE246BE52C007F91A0 /* ResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479ABD246BE52C007F91A0 /* ResultsDataSource.swift */; };
+		CD479AC0246BE571007F91A0 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479ABF246BE571007F91A0 /* ResultsViewModel.swift */; };
+		CD479AC2246BFA25007F91A0 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AC1246BFA25007F91A0 /* ResultsTableViewCell.swift */; };
+		CD479AC7246BFA80007F91A0 /* ResultsViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AC6246BFA80007F91A0 /* ResultsViewTableViewCell.swift */; };
+		CD479AC9246BFC30007F91A0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479AC8246BFC30007F91A0 /* ResultsViewController.swift */; };
+		CD479ACB246BFC6B007F91A0 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD479ACA246BFC6B007F91A0 /* ResultsView.swift */; };
 		CD4934632459EFB800E42E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934622459EFB800E42E36 /* AppDelegate.swift */; };
 		CD4934652459EFB800E42E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934642459EFB800E42E36 /* SceneDelegate.swift */; };
 		CD4934672459EFB800E42E36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4934662459EFB800E42E36 /* ContentView.swift */; };
 		CD4934692459EFBC00E42E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4934682459EFBC00E42E36 /* Assets.xcassets */; };
 		CD49346C2459EFBC00E42E36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD49346B2459EFBC00E42E36 /* Preview Assets.xcassets */; };
 		CD49346F2459EFBC00E42E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD49346D2459EFBC00E42E36 /* LaunchScreen.storyboard */; };
+		CDB3DBAA246BFEBB00D2D21C /* ResultsViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */; };
+		CDB3DBAF246E4DE500D2D21C /* ResultsDataSource2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3DBAE246E4DE500D2D21C /* ResultsDataSource2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +38,16 @@
 		CD479AAA246B88A3007F91A0 /* BookNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNetworkManager.swift; sourceTree = "<group>"; };
 		CD479AAC246B88BB007F91A0 /* NMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMProtocol.swift; sourceTree = "<group>"; };
 		CD479AAE246B89BF007F91A0 /* NMProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMProperties.swift; sourceTree = "<group>"; };
-		CD479AB2246B8BC8007F91A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CD479AB2246B8BC8007F91A0 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		CD479AB5246B8CAD007F91A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CD479AB9246BD295007F91A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD479ABB246BD2FC007F91A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CD479ABD246BE52C007F91A0 /* ResultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataSource.swift; sourceTree = "<group>"; };
+		CD479ABF246BE571007F91A0 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		CD479AC1246BFA25007F91A0 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		CD479AC6246BFA80007F91A0 /* ResultsViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewTableViewCell.swift; sourceTree = "<group>"; };
+		CD479AC8246BFC30007F91A0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CD479ACA246BFC6B007F91A0 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		CD49345F2459EFB800E42E36 /* BeenDer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeenDer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4934622459EFB800E42E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4934642459EFB800E42E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +56,9 @@
 		CD49346B2459EFBC00E42E36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD49346E2459EFBC00E42E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4934702459EFBC00E42E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewConstraints.swift; sourceTree = "<group>"; };
+		CDB3DBAD246C683700D2D21C /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
+		CDB3DBAE246E4DE500D2D21C /* ResultsDataSource2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataSource2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,8 @@
 			children = (
 				CD479A5D246A4A13007F91A0 /* Book.swift */,
 				CD479A5F246A4A42007F91A0 /* Author.swift */,
+				CDB3DBAE246E4DE500D2D21C /* ResultsDataSource2.swift */,
+				CD479ABD246BE52C007F91A0 /* ResultsDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +96,7 @@
 		CD479AB0246B8B37007F91A0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD479ABF246BE571007F91A0 /* ResultsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -84,8 +104,9 @@
 		CD479AB1246B8B88007F91A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CD479AB2246B8BC8007F91A0 /* MainViewController.swift */,
+				CD479AB2246B8BC8007F91A0 /* MainMenuViewController.swift */,
 				CD479AB9246BD295007F91A0 /* LoginViewController.swift */,
+				CD479AC8246BFC30007F91A0 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,14 +115,42 @@
 			isa = PBXGroup;
 			children = (
 				CD479AB5246B8CAD007F91A0 /* MainView.swift */,
+				CD479ACA246BFC6B007F91A0 /* ResultsView.swift */,
+				CD479AC1246BFA25007F91A0 /* ResultsTableViewCell.swift */,
 				CD479ABB246BD2FC007F91A0 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		CD479AC3246BFA4D007F91A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD479AC4246BFA5B007F91A0 /* Constraints */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CD479AC4246BFA5B007F91A0 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				CD479AC5246BFA65007F91A0 /* ViewConstraints */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		CD479AC5246BFA65007F91A0 /* ViewConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				CD479AC6246BFA80007F91A0 /* ResultsViewTableViewCell.swift */,
+				CDB3DBA9246BFEBB00D2D21C /* ResultsViewConstraints.swift */,
+			);
+			path = ViewConstraints;
+			sourceTree = "<group>";
+		};
 		CD4934562459EFB800E42E36 = {
 			isa = PBXGroup;
 			children = (
+				CDB3DBAD246C683700D2D21C /* Notes.md */,
 				CD4934612459EFB800E42E36 /* BeenDer */,
 				CD4934602459EFB800E42E36 /* Products */,
 			);
@@ -118,6 +167,7 @@
 		CD4934612459EFB800E42E36 /* BeenDer */ = {
 			isa = PBXGroup;
 			children = (
+				CD479AC3246BFA4D007F91A0 /* Extensions */,
 				CD479AB4246B8C9C007F91A0 /* View */,
 				CD479AB1246B8B88007F91A0 /* Controllers */,
 				CD479AB0246B8B37007F91A0 /* ViewModel */,
@@ -214,17 +264,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD479A5E246A4A13007F91A0 /* Book.swift in Sources */,
+				CD479ACB246BFC6B007F91A0 /* ResultsView.swift in Sources */,
+				CD479AC0246BE571007F91A0 /* ResultsViewModel.swift in Sources */,
 				CD4934632459EFB800E42E36 /* AppDelegate.swift in Sources */,
 				CD479AAD246B88BB007F91A0 /* NMProtocol.swift in Sources */,
 				CD479AB6246B8CAD007F91A0 /* MainView.swift in Sources */,
 				CD4934652459EFB800E42E36 /* SceneDelegate.swift in Sources */,
 				CD4934672459EFB800E42E36 /* ContentView.swift in Sources */,
+				CD479AC9246BFC30007F91A0 /* ResultsViewController.swift in Sources */,
 				CD479ABC246BD2FC007F91A0 /* LoginView.swift in Sources */,
+				CDB3DBAF246E4DE500D2D21C /* ResultsDataSource2.swift in Sources */,
 				CD479AAF246B89BF007F91A0 /* NMProperties.swift in Sources */,
-				CD479AB3246B8BC8007F91A0 /* MainViewController.swift in Sources */,
+				CD479AC7246BFA80007F91A0 /* ResultsViewTableViewCell.swift in Sources */,
+				CD479ABE246BE52C007F91A0 /* ResultsDataSource.swift in Sources */,
+				CD479AB3246B8BC8007F91A0 /* MainMenuViewController.swift in Sources */,
 				CD479A60246A4A42007F91A0 /* Author.swift in Sources */,
+				CDB3DBAA246BFEBB00D2D21C /* ResultsViewConstraints.swift in Sources */,
 				CD479AAB246B88A3007F91A0 /* BookNetworkManager.swift in Sources */,
 				CD479ABA246BD295007F91A0 /* LoginViewController.swift in Sources */,
+				CD479AC2246BFA25007F91A0 /* ResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

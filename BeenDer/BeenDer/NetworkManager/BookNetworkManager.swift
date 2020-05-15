@@ -14,8 +14,8 @@ class BookNetworkManager: NMProtocol {
     var bookTitle = String()
     var bookAuthor = String()
     func getBook(title: String, completion: @escaping (Data) -> ()) {
-        let API_URL =
-        "https://www.goodreads.com/search.xml?key=\(NetworkProperties.API_KEY)&q=Ender%27s+Game?"
+        //        uisearchbar.text pass in for title
+        let API_URL =        "https://www.goodreads.com/search.xml?key=\(NetworkProperties.API_KEY)&q=\(title)"
         
         guard let url = URL(string: API_URL) else {
             fatalError()

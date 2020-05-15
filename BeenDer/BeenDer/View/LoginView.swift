@@ -62,8 +62,6 @@ class LoginView: UIView {
         return label
     }()
     
-    
-    
     let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "book")

@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class MainMenuViewController: UIViewController, XMLParserDelegate {
+class MainMenuViewController: UIViewController {
     var menuView: MainView!
-    //    let viewModel = MainMenuViewModel()
+    let resultViewModel = ResultsViewModel()
     var getBook = BookNetworkManager()
+    
     
     var books: [Book] = [] {
         didSet {
@@ -29,9 +30,7 @@ class MainMenuViewController: UIViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        getBook.getBook(title: "enders") { data in
-            self.decodeXML(data)
-        }
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -41,6 +40,7 @@ class MainMenuViewController: UIViewController, XMLParserDelegate {
     func setup() {
         setupView()
         setupNav()
+        addButtonTarget()
     }
     
     func setupNav() {
@@ -66,50 +66,23 @@ class MainMenuViewController: UIViewController, XMLParserDelegate {
         self.view.addSubview(menuView)
     }
     
-    // 1
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        
-        if elementName == "work" {
-            bookTitle = String()
-            
-        }
-        
-        if elementName == "author" {
-            bookAuthor = String()
-        }
-        
-        self.elementName = elementName
+    func addButtonTarget() {
+        menuView.ResultsButton.addTarget(self, action: #selector(resultsTapped), for: .touchUpInside)
+
     }
     
-    // 2
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "work" {
-            let book = Book(bookTitle: bookTitle, bookAuthor: bookAuthor)
-            books.append(book)
-        }
-    }
-    
-    // 3
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        let data = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        
-        if (!data.isEmpty) {
-            if self.elementName == "title" {
-                bookTitle += data
-            } else if self.elementName == "name" {
-                bookAuthor += data
+    @objc func resultsTapped() {
+        getBook.getBook(title: "enders") { data in
+            self.resultViewModel.decodeXML(data)
+            DispatchQueue.main.async {
+                let resultVC = ResultsViewController()
+                resultVC.viewModel = self.resultViewModel
+                self.navigationController?.pushViewController(resultVC, animated: true)
             }
         }
-    }
-    
-    func decodeXML(_ data: Data) {
-        let parser = XMLParser(data: data)
-        parser.delegate = self
-        parser.parse()
-        print(books)
-        
     }
     
     
     
 }
+
